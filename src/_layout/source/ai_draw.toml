@@ -1,0 +1,11 @@
+[[items]]
+name="Midjourney"
+url="https://midjourney.com/"
+brief="Midjourney brief"
+path_id="abc"
+
+[[items]]
+name="Stable Diffusion"
+url="https://github.com/CompVis/stable-diffusion"
+brief=" Stable Diffusion brief"
+path_id="abc Notion"

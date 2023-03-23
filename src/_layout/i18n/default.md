@@ -16,3 +16,13 @@ ChatGPT是一款基于人工智能的聊天机器人，能够实现多种语言�
 
 # NotionAI brief
 Notion AI是一种基于人工智能技术的在线文档协作工具，它集合了Notion的现有协作工作方式，与AI自动化处理技术相结合。该工具可以通过AI智能推荐来协助用户创建和管理文档、任务、数据库、日历和笔记等内容。而其内置的机器学习技术和NLP自然语言处理技术更可以快速提取和整理信息，节约时间提升工作效率。
+
+# Stable Diffusion brief
+Stable Diffusion是一个文本到图像的潜在扩散模型，由CompVis、Stability AI和LAION的研究人员和工程师创建。它使用来自LAION-5B数据库子集的512x512图像进行训练。使用这个模型，可以生成包括人脸在内的任何图像，因为有开源的预训练模型，所以我们也可以在自己的机器上运行它。
+
+
+# Midjourney brief
+Midjourney 是 AI 生成算图工具，输入文字就会自动产生图像，目前架设在Discord频道上。
+Discord是国外的一个社群工具，类似QQ。Discord频道就类似QQ群。
+Midjourney的使用方式是：通过给频道内的聊天机器人发送对应文本，聊天机器人返回对应的图片。
+

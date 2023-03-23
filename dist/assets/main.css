@@ -438,6 +438,9 @@ video {
 .h-4{
   height: 1rem;
 }
+.h-6{
+  height: 1.5rem;
+}
 .w-3{
   width: 0.75rem;
 }
@@ -449,6 +452,12 @@ video {
 }
 .w-4{
   width: 1rem;
+}
+.w-8{
+  width: 2rem;
+}
+.w-6{
+  width: 1.5rem;
 }
 .items-center{
   align-items: center;

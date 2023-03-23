@@ -12,13 +12,14 @@
         {{t("简介")}}
     </div>
 
+    {% for item in ds("_layout/source/ai_toc.toml") | get(key="items") %}
     <div>
-        <h2 class="text-4xl font-extrabold text-[#12865A] mb-6">AI 文本</h2>
+        <h2 class="text-4xl font-extrabold text-[#12865A] mb-6">{{item.title}}</h2>
         <div class="space-y-8">
-            {% for item in ds("_layout/source/ai_text.toml") | get(key="items") %}
+            {% for item in ds("_layout/source/" ~ item.key ~ ".toml") | get(key="items") %}
             <div class="space-y-3">
                 <h3 class="text-[#20B687] text-2xl font-bold flex items-center space-x-2">
-                    <img class="" src="@/assets/img/logos/ChatGPT.svg" />
+                    <img class="w-6 h-6" src="@/assets/img/logos/ChatGPT.svg" />
                     <a href="{{item.url}}" target="_blank">{{item.name}}</a>
                 </h3>
                 <div class=" text-[#434A47]">{{t(item.brief)}}</div>
@@ -39,6 +40,7 @@
             {% endfor %}
         </div>
     </div>
+    {% endfor %}
 
 </div>
 {% endblock body %}
