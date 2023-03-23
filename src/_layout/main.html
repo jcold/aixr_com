@@ -1,10 +1,11 @@
-
-
+<!DOCTYPE html>
+<html>
+{% set site = ds("_layout/source/site_info.toml") %}
 <head>
-    <title>AI矩阵</title>
+    <title>{{site.base.name}}</title>
     <meta name="description" content="" />
     <meta name="keywords" content="" />
-    
+    {% block meta %}
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1.0" />
     <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
@@ -15,34 +16,24 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="format-detection" content="telephone=no" />
     <meta http-equiv="Windows-Target" contect="_top" />
-    
-    
-    <link rel="stylesheet" href="/assets/css/main.6c36e91b.css">
-    
+    {% endblock meta %}
+    {% block css %}
+    {{ assets(section="main", type="css") }}
+    {% endblock css %}
 </head>
 
 <body>
     <div class="body-container text-[#2f353e]">
-        
-<div class="block-container space-y-6">
-    <h1 class="text-3xl font-bold mt-6">
-        <a href="/">
-            AI矩阵
-        </a>
-    </h1>
-    <div class="text-lg text-black/90 content-box">
-        建设中……
-    </div>
-</div>
+        {% block body %}{% endblock body %}
 
-
-        
+        {% block footer %}
         <div class="text-sm block-container mt-12 text-gray-500">© 2023, By <a href="https://www.daobox.cn" target="_blank">道盒</a></div>
-        
+        {% endblock footer %}
     </div>
-    <script async src="/assets/js/main.6c36e91b.js"></script>
+    {% block js %}{{ assets(section="main", type="js") }}{% endblock js %}
     <script>
         !function(p){"use strict";!function(t){var s=window,e=document,i=p,c="".concat("https:"===e.location.protocol?"https://":"http://","sdk.51.la/js-sdk-pro.min.js"),n=e.createElement("script"),r=e.getElementsByTagName("script")[0];n.type="text/javascript",n.setAttribute("charset","UTF-8"),n.async=!0,n.src=c,n.id="LA_COLLECT",i.d=n;var o=function(){s.LA.ids.push(i)};s.LA?s.LA.ids&&o():(s.LA=p,s.LA.ids=[],o()),r.parentNode.insertBefore(n,r)}()}({id:"K0gyCrkrZm5wdujd",ck:"K0gyCrkrZm5wdujd"});
     </script>
 </body>
 
+</html>
