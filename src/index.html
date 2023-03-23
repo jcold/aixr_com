@@ -4,14 +4,41 @@
 
 
 {% block body %}
-<div class="block-container space-y-6">
-    <h1 class="text-3xl font-bold mt-6">
-        <a href="/">
-            {{site.base.name}}
-        </a>
-    </h1>
-    <div class="text-lg text-black/90 content-box">
-        建设中……
+<div class="block-container space-y-12 text-[#222624] text-lg">
+    <a class="block mt-6" href="/">
+        <img class="h-16" src="@/assets/img/aixr-logo.svg" alt="{{site.base.name}}" />
+    </a>
+    <div class="text-black/90 content-box ">
+        {{t("简介")}}
     </div>
+
+    <div>
+        <h2 class="text-4xl font-extrabold text-[#12865A] mb-6">AI 文本</h2>
+        <div class="space-y-8">
+            {% for item in ds("_layout/source/ai_text.toml") | get(key="items") %}
+            <div class="space-y-3">
+                <h3 class="text-[#20B687] text-2xl font-bold flex items-center space-x-2">
+                    <img class="" src="@/assets/img/logos/ChatGPT.svg" />
+                    <a href="{{item.url}}" target="_blank">{{item.name}}</a>
+                </h3>
+                <div class=" text-[#434A47]">{{t(item.brief)}}</div>
+                <div class="space-y-1 text-base">
+                    {% for i in range(end=5) %}
+                    <div class="flex items-center space-x-8">
+                        <a href="https://chat.openai.com" class="text-[#0F865A] hover:text-[#20B687]">{{i}} ChatGPT是一款基于人工智</a>
+                        <span class="text-gray-400 text-sm">2023-03-21</span>
+                    </div>
+                    {% endfor %}
+
+                    <a href="https://chat.openai.com" class="text-[#0F865A] flex items-center space-x-1">
+                        <span>更多</span>
+                        <span class="block w-3.5 h-3.w-3.5">{{blocks::arrow_right()}}</span>
+                    </a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
 </div>
 {% endblock body %}

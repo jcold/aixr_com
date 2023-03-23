@@ -1,0 +1,11 @@
+[[items]]
+name="ChatGPT"
+url="https://chat.openai.com"
+brief="ChatGPT brief"
+path_id="abc"
+
+[[items]]
+name="Notion AI"
+url="https://notion.so"
+brief="NotionAI brief"
+path_id="abc Notion"
