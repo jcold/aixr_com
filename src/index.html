@@ -28,13 +28,13 @@
                     {% set articles = daobox_items(page=1, limit=4, path_id=item.path_id, config=cfg.daobox) %}
                     {% for item in articles.items | slice(end=3)  %}
                     <div class="flex items-center space-x-8">
-                        <a href="./details.{{item.id}}.html?id={{item.id}}" class="text-[#0F865A] hover:text-[#20B687]">{{item.title}}</a>
+                        <a href="./details/{{item.id}}.html?id={{item.id}}" class="text-[#0F865A] hover:text-[#20B687]">{{item.title}}</a>
                         <span class="text-gray-400 text-sm">{{item.create_at / 1000 | int | date(format="%Y-%m-%d")}}</span>
                     </div>
                     {% endfor %}
 
                     {% if articles.items | length > 3 %}
-                    <a href="./dir.{{item.path_id}}.html?id={{item.path_id}}" class="text-[#0F865A] flex items-center space-x-1">
+                    <a href="./catalog/{{item.path_id}}/?id={{item.path_id}}" class="text-[#0F865A] flex items-center space-x-1">
                         <span>更多</span>
                         <span class="block w-3.5 h-3.w-3.5">{{blocks::arrow_right()}}</span>
                     </a>

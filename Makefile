@@ -1,5 +1,9 @@
+#@RUST_BACKTRACE=1 /Users/dayu/.cargo/bin/daobox-site serve \
+@RUST_BACKTRACE=1 /Users/dayu/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
+#@RUST_BACKTRACE=1 pnpm daobox serve \
+
 serve:
-	@RUST_BACKTRACE=1 pnpm daobox serve \
+	@RUST_BACKTRACE=1 /Users/dayu/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
 		--assets-dir ./dist/assets \
 		--assets-prefix / \
 		--dist-dir ./dist \
@@ -7,9 +11,7 @@ serve:
 		--templates-dir ./src
 
 export-all:
-#@RUST_BACKTRACE=1 /Users/dayu/.cargo/bin/daobox-site serve \
-	
-	@RUST_BACKTRACE=1 pnpm daobox serve \
+	@RUST_BACKTRACE=1 /Users/dayu/Coder/yiibox/daobox-server-next/wz-server/target/debug/daobox-site serve \
 		--assets-dir ./dist/assets \
 		--assets-prefix / \
 		--dist-dir ./dist \
