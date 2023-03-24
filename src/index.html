@@ -4,7 +4,7 @@
 
 
 {% block body %}
-<div class="block-container space-y-12 text-[#222624] text-lg">
+<div class="block-container space-y-12 text-[#222624]">
     <a class="block mt-6" href="/">
         <img class="h-16" src="@/assets/img/aixr-logo.svg" alt="{{site.base.name}}" />
     </a>
@@ -12,6 +12,7 @@
         {{t("简介")}}
     </div>
 
+    {% set cfg = ds("/_layout/source/daobox_cfg.toml") %}
     {% for item in ds("_layout/source/ai_toc.toml") | get(key="items") %}
     <div>
         <h2 class="text-4xl font-extrabold text-[#12865A] mb-6">{{item.title}}</h2>
@@ -23,18 +24,21 @@
                     <a href="{{item.url}}" target="_blank">{{item.name}}</a>
                 </h3>
                 <div class=" text-[#434A47]">{{t(item.brief)}}</div>
-                <div class="space-y-1 text-base">
-                    {% for i in range(end=5) %}
+                <div class="space-y-1">
+                    {% set articles = daobox_items(page=1, limit=4, path_id=item.path_id, config=cfg.daobox) %}
+                    {% for item in articles.items | slice(end=3)  %}
                     <div class="flex items-center space-x-8">
-                        <a href="https://chat.openai.com" class="text-[#0F865A] hover:text-[#20B687]">{{i}} ChatGPT是一款基于人工智</a>
-                        <span class="text-gray-400 text-sm">2023-03-21</span>
+                        <a href="./details.{{item.id}}.html?id={{item.id}}" class="text-[#0F865A] hover:text-[#20B687]">{{item.title}}</a>
+                        <span class="text-gray-400 text-sm">{{item.create_at / 1000 | int | date(format="%Y-%m-%d")}}</span>
                     </div>
                     {% endfor %}
 
-                    <a href="https://chat.openai.com" class="text-[#0F865A] flex items-center space-x-1">
+                    {% if articles.items | length > 3 %}
+                    <a href="./dir.{{item.path_id}}.html?id={{item.path_id}}" class="text-[#0F865A] flex items-center space-x-1">
                         <span>更多</span>
                         <span class="block w-3.5 h-3.w-3.5">{{blocks::arrow_right()}}</span>
                     </a>
+                    {% endif %}
                 </div>
             </div>
             {% endfor %}

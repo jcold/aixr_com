@@ -1,0 +1,22 @@
+{% extends "_layout/main.html" %}
+{% import "_layout/blocks.html" as blocks %}
+{% set site = ds("_layout/source/site_info.toml") %}
+
+
+{% block body %}
+<div class="block-container space-y-12 text-[#222624]">
+    <a class="block mt-6" href="/">
+        <img class="w-20" src="@/assets/img/aixr-logo.svg" alt="{{site.base.name}}" />
+    </a>
+
+    {% set cfg = ds("/_layout/source/daobox_cfg.toml") %}
+    {% set note = daobox_item(id=__qs.id, config=cfg.daobox) %}
+    <div class="space-y-3">
+        <h2 class="text-4xl font-semibold">{{note.title}}</h2>
+        <div class="text-gray-600">{{note.create_at / 1000 | int | date(format="%Y-%m-%d")}}</div>
+    </div>
+    <div class="yb-content2">{{note.content_html | safe}}</div>
+  
+
+</div>
+{% endblock body %}

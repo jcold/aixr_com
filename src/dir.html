@@ -1,0 +1,45 @@
+{% extends "_layout/main.html" %}
+{% import "_layout/blocks.html" as blocks %}
+{% set site = ds("_layout/source/site_info.toml") %}
+
+
+{% block body %}
+<div class="block-container space-y-12 text-[#222624]">
+    <a class="block mt-6" href="/">
+        <img class="w-20" src="@/assets/img/aixr-logo.svg" alt="{{site.base.name}}" />
+    </a>
+
+    {% set path_id =__qs.id %}
+    {% set page_no =__qs.page | default(value=1) | int %}
+    {% set cfg = ds("/_layout/source/daobox_cfg.toml") %}
+    {% set items = daobox_items(page=page_no, limit=3, path_id=path_id, config=cfg.daobox) %}
+    {% for item in items.items %}
+    <div class="space-y-2">
+        <h2 class="text-2xl"><a class="text-[#005b99] font-medium" href="details.{{item.id}}.html?id={{item.id}}" target="_blank">{{item.title}}</a></h2>
+        <div class="text-[#2f353e] font-light text-[90%] number">{{item.create_at / 1000 | int | date(format="%Y-%m-%d")}}</div>
+    </div>
+    {% endfor %}
+
+    <div class="space-x-6 flex !mt-10">
+        {% if page_no > 1 %}
+        <div class="flex items-center space-x-1">
+            {% if page_no == 2 %}
+            {{blocks::arrow_left()}}
+            <a href="dir.{{path_id}}.html?id={{path_id}}">上一页</a>
+            {% elif page_no > 2 %}
+            {{blocks::arrow_left()}}
+            <a href="dir.{{path_id}}.p{{page_no-1}}.html?id={{path_id}}&page={{page_no-1}}">上一页</a>
+            {% endif %}
+        </div>
+        {% endif %}
+            
+        {% if items.cursor %}
+        <div class="flex items-center space-x-1">
+            <a href="dir.{{path_id}}.p{{page_no+1}}.html?id={{path_id}}&page={{page_no+1}}">下一页</a>
+            {{blocks::arrow_right()}}
+        </div>
+        {% endif %}
+    </div>
+
+</div>
+{% endblock body %}
