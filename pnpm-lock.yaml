@@ -59,7 +59,7 @@ specifiers:
   cross-env: ^7.0.3
   cross-env-file: ^1.0.0
   css-loader: ^6.7.1
-  daobox-site: ^0.3.1
+  daobox-site: ^0.3.2
   dayjs: ^1.11.5
   deep-diff: ^1.0.2
   del: ^7.0.0
@@ -229,7 +229,7 @@ dependencies:
   cross-env: 7.0.3
   cross-env-file: 1.0.0
   css-loader: 6.7.3_webpack@5.76.2
-  daobox-site: 0.3.1
+  daobox-site: 0.3.2
   dayjs: 1.11.7
   deep-diff: 1.0.2
   del: 7.0.0
@@ -5799,8 +5799,8 @@ packages:
     resolution: {integrity: sha512-sdQSFB7+llfUcQHUQO3+B8ERRj0Oa4w9POWMI/puGtuf7gFywGmkaLCElnudfTiKZV+NvHqL0ifzdrI8Ro7ESA==}
     dev: false
 
-  /daobox-site/0.3.1:
-    resolution: {integrity: sha512-fAMXCAIPjBQVe3Bhc5i8jtZUHJbYD3ORTGzVFDTMgV4fUp8gHbWKhTDkG8S/dS0GyF4l+nZdqJGqLvKdZY5CAA==}
+  /daobox-site/0.3.2:
+    resolution: {integrity: sha512-KR/4ldC/VXPJPmA1jDwP+9U1GlGypirCJzPUrkXEeNpjYds0B1lkX9cFJ7GO58jCNMJJmg5cQ4EUeSk/xfA7YA==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true

@@ -3,9 +3,11 @@ name="ChatGPT"
 url="https://chat.openai.com"
 brief="ChatGPT brief"
 path_id="abc"
+icon="@/assets/img/logos/ChatGPT.svg"
 
 [[items]]
 name="Notion AI"
 url="https://notion.so"
 brief="NotionAI brief"
 path_id="abc Notion"
+icon="@/assets/img/logos/notion-logo.svg"

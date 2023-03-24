@@ -19,7 +19,7 @@
             {% for item in ds("_layout/source/" ~ item.key ~ ".toml") | get(key="items") %}
             <div class="space-y-3">
                 <h3 class="text-[#20B687] text-2xl font-bold flex items-center space-x-2">
-                    <img class="w-6 h-6" src="@/assets/img/logos/ChatGPT.svg" />
+                    <img class="w-6 h-6" src="{{imgsrc(file=item.icon)}}" />
                     <a href="{{item.url}}" target="_blank">{{item.name}}</a>
                 </h3>
                 <div class=" text-[#434A47]">{{t(item.brief)}}</div>

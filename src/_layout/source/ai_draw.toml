@@ -3,9 +3,11 @@ name="Midjourney"
 url="https://midjourney.com/"
 brief="Midjourney brief"
 path_id="abc"
+icon="@/assets/img/logos/Midjourney-1.webp"
 
 [[items]]
 name="Stable Diffusion"
 url="https://github.com/CompVis/stable-diffusion"
 brief=" Stable Diffusion brief"
 path_id="abc Notion"
+icon="@/assets/img/logos/ChatGPT.svg"

@@ -67,7 +67,7 @@
     "cross-env": "^7.0.3",
     "cross-env-file": "^1.0.0",
     "css-loader": "^6.7.1",
-    "daobox-site": "^0.3.1",
+    "daobox-site": "^0.3.2",
     "dayjs": "^1.11.5",
     "deep-diff": "^1.0.2",
     "del": "^7.0.0",
