@@ -55,7 +55,7 @@
     content: counter(list-item, var(--list-counter-style, decimal)) ".";
     position: absolute;
     font-weight: 400;
-    color: #6b7280;
+    color: #374151;
     left: 0;
   }
 
@@ -76,7 +76,7 @@
   ul > li::before {
     content: "";
     position: absolute;
-    background-color: #d1d5db;
+    background-color: #374151;
     border-radius: 50%;
     width: 0.4em;
     height: 0.4em;

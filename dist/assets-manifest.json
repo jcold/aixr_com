@@ -3,14 +3,14 @@
     "main": {
       "assets": {
         "css": [
-          "assets/css/main.b4804fc4.css"
+          "assets/css/main.896ff2fb.css"
         ],
         "js": [
-          "assets/js/main.b4804fc4.js"
+          "assets/js/main.896ff2fb.js"
         ]
       }
     }
   },
-  "main.css": "assets/css/main.b4804fc4.css",
-  "main.js": "assets/js/main.b4804fc4.js"
+  "main.css": "assets/css/main.896ff2fb.css",
+  "main.js": "assets/js/main.896ff2fb.js"
 }

@@ -23,7 +23,7 @@ ChatGPT是一款基于人工智能的聊天机器人，能够实现多种语言�
 Notion AI是一种基于人工智能技术的在线文档协作工具，它集合了Notion的现有协作工作方式，与AI自动化处理技术相结合。该工具可以通过AI智能推荐来协助用户创建和管理文档、任务、数据库、日历和笔记等内容。而其内置的机器学习技术和NLP自然语言处理技术更可以快速提取和整理信息，节约时间提升工作效率。
 
 # Stable Diffusion brief
-Stable Diffusion是一个文本到图像的潜在扩散模型，由CompVis、Stability AI和LAION的研究人员和工程师创建。它使用来自LAION-5B数据库子集的512x512图像进行训练。使用这个模型，可以生成包括人脸在内的任何图像，因为有开源的预训练模型，所以我们也可以在自己的机器上运行它。
+Stable Diffusion是一个文本到图像的潜在扩散模型，由[CompVis](https://github.com/CompVis/stable-diffusion)、[Stability AI](https://stability.ai/)和LAION的研究人员和工程师创建。它使用来自LAION-5B数据库子集的512x512图像进行训练。使用这个模型，可以生成包括人脸在内的任何图像，因为有开源的预训练模型，所以我们也可以在自己的机器上运行它。
 
 ### 在线应用
 * [Clipdrop](https://clipdrop.co/)：提供对图片去除背景、高清放大、替换元素等服务。
