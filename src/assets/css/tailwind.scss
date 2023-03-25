@@ -15,13 +15,13 @@ a {
 }
 
 .link {
-  @apply text-blue-600 hover:text-blue-700;
+  @apply text-[#0F865A];
   // @include underline;
 }
 
 .common-tag-a {
   a {
-    @apply underline-offset-4 hover:underline hover:text-blue-600;
+    @apply underline-offset-4 text-[#0F865A] hover:underline;
   }
 }
 
@@ -83,6 +83,6 @@ body {
 
 .content-box{
   p {
-    @apply my-6;
+    @apply my-3 #{!important};
   }
 }
